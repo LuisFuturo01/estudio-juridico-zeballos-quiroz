@@ -1,0 +1,298 @@
+{
+  "filters": [
+    {
+      "id": "all",
+      "label": {
+        "es": "Todas",
+        "en": "All"
+      }
+    },
+    {
+      "id": "personas",
+      "label": {
+        "es": "Personas y familias",
+        "en": "Individuals & families"
+      }
+    },
+    {
+      "id": "empresas",
+      "label": {
+        "es": "Empresas",
+        "en": "Businesses"
+      }
+    },
+    {
+      "id": "patrimonio",
+      "label": {
+        "es": "Bienes y propiedad",
+        "en": "Property & assets"
+      }
+    },
+    {
+      "id": "urgente",
+      "label": {
+        "es": "Atención urgente",
+        "en": "Urgent assistance"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "familia",
+      "icon": "users",
+      "image_url": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "personas",
+        "patrimonio"
+      ],
+      "title": {
+        "es": "Derecho de Familia",
+        "en": "Family Law"
+      },
+      "description": {
+        "es": "Acompañamiento humano y estratégico en divorcios, asistencia familiar, guarda de hijos y división de bienes gananciales.",
+        "en": "Compassionate, strategic guidance on divorce, child support, custody and division of marital property."
+      },
+      "keyPoints": {
+        "es": [
+          "Divorcios y desvinculación conyugal",
+          "Asistencia familiar (fijación, aumento y cobro)",
+          "Guarda, tenencia y régimen de visitas",
+          "Partición de bienes gananciales"
+        ],
+        "en": [
+          "Divorce and dissolution of marriage",
+          "Child support (setting, increase and collection)",
+          "Custody, guardianship and visitation",
+          "Division of marital property"
+        ]
+      },
+      "procedures": {
+        "es": [
+          "Divorcio de mutuo acuerdo por vía notarial, registral o judicial según el caso",
+          "Divorcio contencioso ante Juzgado Público de Familia",
+          "Demanda de asistencia familiar, incremento y liquidación de pensiones devengadas",
+          "Medidas de protección y guarda provisional de hijos menores",
+          "Reconocimiento y división de bienes adquiridos durante la unión"
+        ],
+        "en": [
+          "Uncontested divorce through notarial, civil registry or judicial channels as applicable",
+          "Contested divorce before the Public Family Court",
+          "Child-support claims, increases and settlement of arrears",
+          "Protective measures and provisional custody of minor children",
+          "Recognition and division of assets acquired during the union"
+        ]
+      },
+      "approach": {
+        "es": "Priorizamos acuerdos que protejan el interés superior de los hijos y reduzcan el desgaste emocional. Cuando el acuerdo no es posible, litigamos con firmeza y documentación sólida.",
+        "en": "We prioritise agreements that protect the best interests of the children and reduce emotional strain. When agreement isn't possible, we litigate firmly with solid documentation."
+      }
+    },
+    {
+      "id": "civil",
+      "icon": "scroll-text",
+      "image_url": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "personas",
+        "empresas",
+        "patrimonio"
+      ],
+      "title": {
+        "es": "Derecho Civil y Obligaciones",
+        "en": "Civil Law & Obligations"
+      },
+      "description": {
+        "es": "Contratos seguros, cobro de deudas y saneamiento de inmuebles ante Derechos Reales para proteger su patrimonio.",
+        "en": "Secure contracts, debt recovery and real-estate title clearance before the Property Registry (Derechos Reales)."
+      },
+      "keyPoints": {
+        "es": [
+          "Redacción y revisión de contratos",
+          "Cobro coactivo y ejecutivo de deudas",
+          "Saneamiento y registro en DDRR",
+          "Usucapión, reivindicación y desalojo"
+        ],
+        "en": [
+          "Contract drafting and review",
+          "Enforced and executive debt collection",
+          "Title clearance and registration (DDRR)",
+          "Adverse possession, recovery and eviction"
+        ]
+      },
+      "procedures": {
+        "es": [
+          "Contratos de compraventa, anticrético, alquiler y préstamo",
+          "Procesos ejecutivos y monitorios para el cobro de obligaciones",
+          "Inscripción, rectificación y saneamiento de folios reales en Derechos Reales",
+          "Acciones de usucapión, reivindicación, división y desalojo",
+          "Conciliación previa y negociación extrajudicial"
+        ],
+        "en": [
+          "Sale, anticrético (antichresis), lease and loan agreements",
+          "Executive and summary (monitorio) proceedings for debt recovery",
+          "Registration, correction and clearance of property records in Derechos Reales",
+          "Adverse possession, recovery, partition and eviction actions",
+          "Pre-trial conciliation and out-of-court negotiation"
+        ]
+      },
+      "approach": {
+        "es": "Prevenir es más económico que litigar: revisamos cada documento antes de su firma y, si el conflicto ya existe, buscamos la vía procesal más rápida para recuperar su crédito o bien.",
+        "en": "Prevention is cheaper than litigation: we review every document before signing and, if a dispute already exists, we pursue the fastest procedural route to recover your money or property."
+      }
+    },
+    {
+      "id": "laboral",
+      "icon": "briefcase",
+      "image_url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "personas",
+        "empresas"
+      ],
+      "title": {
+        "es": "Derecho Laboral y Seguridad Social",
+        "en": "Labour & Social Security Law"
+      },
+      "description": {
+        "es": "Defensa de trabajadores y asesoría a empleadores: beneficios sociales, finiquitos, despidos y trámites ante el Ministerio de Trabajo.",
+        "en": "Representation for employees and advice for employers: severance benefits, settlements, dismissals and Ministry of Labour procedures."
+      },
+      "keyPoints": {
+        "es": [
+          "Cálculo y cobro de beneficios sociales",
+          "Finiquitos y desahucio",
+          "Despido injustificado y reincorporación",
+          "Denuncias ante el Ministerio de Trabajo"
+        ],
+        "en": [
+          "Calculation and recovery of severance benefits",
+          "Final settlements and notice pay",
+          "Unfair dismissal and reinstatement",
+          "Complaints before the Ministry of Labour"
+        ]
+      },
+      "procedures": {
+        "es": [
+          "Liquidación de indemnización, desahucio, aguinaldo y vacaciones",
+          "Revisión y firma asistida del finiquito",
+          "Denuncia y audiencia de conciliación en la Jefatura Departamental de Trabajo",
+          "Demanda de reincorporación o de pago de beneficios ante Juzgado de Trabajo",
+          "Asesoría preventiva a empresas: contratos, reglamentos internos y aportes"
+        ],
+        "en": [
+          "Calculation of severance, notice pay, Christmas bonus and vacation",
+          "Review and assisted signing of the final settlement (finiquito)",
+          "Complaint and conciliation hearing at the Departmental Labour Office",
+          "Reinstatement or benefits claim before the Labour Court",
+          "Preventive advice for employers: contracts, internal rules and social-security contributions"
+        ]
+      },
+      "approach": {
+        "es": "Calculamos con exactitud lo que corresponde por ley, reunimos la prueba (boletas, contratos, mensajes) y buscamos primero una conciliación rápida antes de llegar a juicio.",
+        "en": "We calculate exactly what the law grants, gather the evidence (payslips, contracts, messages) and seek a quick settlement before going to trial."
+      }
+    },
+    {
+      "id": "agrario",
+      "icon": "trees",
+      "image_url": "https://images.unsplash.com/photo-1604303471734-3a1f493b3c13?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "personas",
+        "patrimonio",
+        "empresas"
+      ],
+      "title": {
+        "es": "Derecho Agrario y Agroambiental",
+        "en": "Agrarian & Agro-environmental Law"
+      },
+      "description": {
+        "es": "Saneamiento y titulación ante el INRA, conflictos de linderos y procesos ante juzgados agroambientales.",
+        "en": "Land titling with INRA, boundary disputes and proceedings before agro-environmental courts."
+      },
+      "keyPoints": {
+        "es": [
+          "Saneamiento y titulación INRA",
+          "Conflictos de linderos y avasallamientos",
+          "Juzgados agroambientales",
+          "Sucesión y transferencia de predios rurales"
+        ],
+        "en": [
+          "INRA land regularisation and titling",
+          "Boundary disputes and land invasions",
+          "Agro-environmental courts",
+          "Succession and transfer of rural land"
+        ]
+      },
+      "procedures": {
+        "es": [
+          "Seguimiento técnico-jurídico del proceso de saneamiento ante el INRA",
+          "Observaciones, recursos y oposiciones dentro del saneamiento",
+          "Acciones de mejor derecho, interdictos y desalojo por avasallamiento",
+          "Mensura y deslinde ante el Juzgado Agroambiental",
+          "Registro de títulos ejecutoriales en Derechos Reales"
+        ],
+        "en": [
+          "Technical-legal follow-up of the INRA regularisation process",
+          "Objections, appeals and oppositions within regularisation",
+          "Better-title actions, possessory remedies and eviction for land invasion",
+          "Survey and boundary demarcation before the Agro-environmental Court",
+          "Registration of executive land titles in Derechos Reales"
+        ]
+      },
+      "approach": {
+        "es": "Coordinamos con topógrafos y conocemos el procedimiento del INRA paso a paso, para que su predio llegue a título sin observaciones que lo retrasen años.",
+        "en": "We coordinate with surveyors and know the INRA procedure step by step, so your land reaches a title without objections that could delay it for years."
+      }
+    },
+    {
+      "id": "transito",
+      "icon": "car-front",
+      "image_url": "https://images.unsplash.com/photo-1713623311317-d3c43a4be4cf?auto=format&fit=crop&w=900&q=80",
+      "tags": [
+        "personas",
+        "urgente"
+      ],
+      "title": {
+        "es": "Derecho de Tránsito y Accidentes",
+        "en": "Traffic & Accident Law"
+      },
+      "description": {
+        "es": "Asistencia inmediata 24/7 en accidentes: Organismo Operativo de Tránsito, SOAT, conciliación y querellas penales.",
+        "en": "24/7 immediate assistance after accidents: Traffic Police (OOT), SOAT insurance, settlement and criminal complaints."
+      },
+      "keyPoints": {
+        "es": [
+          "Asistencia inmediata en el lugar del accidente",
+          "Trámites ante el Organismo Operativo de Tránsito",
+          "Reclamos de SOAT y seguros",
+          "Conciliación y querellas penales"
+        ],
+        "en": [
+          "On-site assistance after an accident",
+          "Procedures before the Traffic Police (OOT)",
+          "SOAT and insurance claims",
+          "Settlements and criminal complaints"
+        ]
+      },
+      "procedures": {
+        "es": [
+          "Acompañamiento en declaraciones, peritajes y prueba de alcoholemia",
+          "Recuperación de vehículos retenidos y documentación",
+          "Activación del SOAT para gastos médicos, incapacidad o fallecimiento",
+          "Conciliación económica por daños materiales y lesiones",
+          "Querella penal o defensa en casos de lesiones u homicidio culposo"
+        ],
+        "en": [
+          "Assistance during statements, expert reports and breathalyser tests",
+          "Release of impounded vehicles and documents",
+          "SOAT claims for medical expenses, disability or death",
+          "Financial settlement for property damage and injuries",
+          "Criminal complaint or defence in injury or negligent homicide cases"
+        ]
+      },
+      "approach": {
+        "es": "Las primeras horas son decisivas. Nuestro abogado de guardia le orienta por teléfono o acude al lugar para evitar declaraciones o acuerdos que perjudiquen su caso.",
+        "en": "The first hours are decisive. Our on-call lawyer guides you by phone or comes to the scene so you avoid statements or agreements that could harm your case."
+      }
+    }
+  ]
+}

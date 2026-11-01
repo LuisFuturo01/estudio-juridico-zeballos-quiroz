@@ -1,0 +1,36 @@
+{
+  "contact": {
+    "address": {
+      "es": "Av. 16 de Julio (El Prado), Edificio [Nombre], Piso [N], Of. [N] — Zona Central",
+      "en": "16 de Julio Ave. (El Prado), [Building name], Floor [N], Office [N] — Downtown"
+    },
+    "city": "La Paz, Bolivia",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El+Prado+La+Paz+Bolivia",
+    "phone": "+59170000000",
+    "phoneDisplay": "+591 700 00000",
+    "email": "contacto@zeballosquiroz.bo",
+    "hours": {
+      "es": "Lunes a viernes 08:30 – 19:00 · Sábados 09:00 – 13:00 · Urgencias de tránsito 24/7",
+      "en": "Monday–Friday 08:30 – 19:00 · Saturday 09:00 – 13:00 · Traffic emergencies 24/7"
+    }
+  },
+  "whatsapp": {
+    "number": "59170000000",
+    "emergencyNumber": "59170000001",
+    "defaultMessage": {
+      "es": "Hola Estudio Jurídico Zeballos Quiroz, me comunico desde La Paz, Bolivia. Deseo agendar una consulta legal.",
+      "en": "Hello Zeballos Quiroz Law Firm, I'm writing from La Paz, Bolivia. I would like to schedule a legal consultation."
+    },
+    "emergencyMessage": {
+      "es": "URGENTE — Necesito asistencia legal inmediata por un accidente de tránsito en La Paz, Bolivia. Mi ubicación es: ",
+      "en": "URGENT — I need immediate legal assistance after a traffic accident in La Paz, Bolivia. My location is: "
+    }
+  },
+  "links": [
+    { "id": "facebook", "label": "Facebook", "url": "https://www.facebook.com/" },
+    { "id": "instagram", "label": "Instagram", "url": "https://www.instagram.com/" },
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+    { "id": "tiktok", "label": "TikTok", "url": "https://www.tiktok.com/" },
+    { "id": "whatsapp", "label": "WhatsApp", "url": "whatsapp" }
+  ]
+}

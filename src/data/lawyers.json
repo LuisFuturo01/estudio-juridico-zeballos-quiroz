@@ -1,0 +1,95 @@
+[
+  {
+    "id": "zeballos",
+    "name": "Abg. Marcelo Zeballos",
+    "role": {
+      "es": "Socio Fundador",
+      "en": "Founding Partner"
+    },
+    "photo_url": "https://images.unsplash.com/photo-1733348137468-90b917d2ebf1?auto=format&fit=crop&w=800&q=80&h=1000",
+    "specialties_ids": [
+      "civil",
+      "agrario",
+      "transito"
+    ],
+    "bio": {
+      "es": "Litigante con amplia trayectoria en tribunales de La Paz y El Alto. Dirige las áreas de patrimonio y la guardia de accidentes de tránsito del estudio.",
+      "en": "Trial lawyer with extensive experience before the courts of La Paz and El Alto. Leads the firm's property practice and the traffic-accident on-call service."
+    },
+    "education": {
+      "es": [
+        "Licenciatura en Derecho — Universidad Mayor de San Andrés",
+        "Diplomado en Derecho Procesal Civil",
+        "Especialidad en Derecho Agrario y Agroambiental"
+      ],
+      "en": [
+        "Law Degree — Universidad Mayor de San Andrés",
+        "Postgraduate Diploma in Civil Procedure",
+        "Specialisation in Agrarian & Agro-environmental Law"
+      ]
+    },
+    "linkedin": "https://www.linkedin.com/",
+    "email": "mzeballos@zeballosquiroz.bo"
+  },
+  {
+    "id": "quiroz",
+    "name": "Abg. Daniela Quiroz",
+    "role": {
+      "es": "Socia Fundadora",
+      "en": "Founding Partner"
+    },
+    "photo_url": "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?auto=format&fit=crop&w=800&q=80&h=1000",
+    "specialties_ids": [
+      "familia",
+      "laboral"
+    ],
+    "bio": {
+      "es": "Especialista en conflictos familiares y laborales, con enfoque en conciliación y protección del interés superior de niñas, niños y adolescentes.",
+      "en": "Specialist in family and employment disputes, focused on conciliation and the best interests of children and adolescents."
+    },
+    "education": {
+      "es": [
+        "Licenciatura en Derecho — Universidad Católica Boliviana",
+        "Maestría en Derecho de Familia",
+        "Conciliadora certificada"
+      ],
+      "en": [
+        "Law Degree — Universidad Católica Boliviana",
+        "Master's in Family Law",
+        "Certified Mediator"
+      ]
+    },
+    "linkedin": "https://www.linkedin.com/",
+    "email": "dquiroz@zeballosquiroz.bo"
+  },
+  {
+    "id": "asociado-1",
+    "name": "Abg. Rodrigo Mamani",
+    "role": {
+      "es": "Abogado Asociado",
+      "en": "Associate Attorney"
+    },
+    "photo_url": "https://images.unsplash.com/photo-1713947507130-227586ab3024?auto=format&fit=crop&w=800&q=80&h=1000",
+    "specialties_ids": [
+      "transito",
+      "laboral",
+      "civil"
+    ],
+    "bio": {
+      "es": "Integra la guardia 24/7 de accidentes de tránsito y lleva procesos laborales y de cobro de deudas con seguimiento diario de expedientes.",
+      "en": "Member of the 24/7 traffic-accident on-call team; handles labour and debt-collection cases with daily case-file follow-up."
+    },
+    "education": {
+      "es": [
+        "Licenciatura en Derecho — Universidad Mayor de San Andrés",
+        "Diplomado en Derecho Penal y Procesal Penal"
+      ],
+      "en": [
+        "Law Degree — Universidad Mayor de San Andrés",
+        "Postgraduate Diploma in Criminal Law & Procedure"
+      ]
+    },
+    "linkedin": "https://www.linkedin.com/",
+    "email": "rmamani@zeballosquiroz.bo"
+  }
+]

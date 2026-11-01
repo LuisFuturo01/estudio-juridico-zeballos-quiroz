@@ -1,0 +1,102 @@
+[
+  {
+    "id": "que-hacer-tras-accidente-transito",
+    "date": "2026-10-20",
+    "author": "Abg. Marcelo Zeballos",
+    "category": "transito",
+    "image_url": "https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=1200&q=80",
+    "readingMinutes": 4,
+    "title": {
+      "es": "Accidente de tránsito en La Paz: qué hacer en las primeras 24 horas",
+      "en": "Traffic accident in La Paz: what to do in the first 24 hours"
+    },
+    "summary": {
+      "es": "Una guía práctica para proteger su salud, sus derechos y su vehículo desde el primer minuto después de un choque.",
+      "en": "A practical guide to protect your health, your rights and your vehicle from the very first minute after a crash."
+    },
+    "content_md": {
+      "es": "## 1. Priorice la atención médica\nSi hay personas heridas, llame a emergencias y solicite atención. El **SOAT** cubre gastos médicos de cualquier persona lesionada, sin importar quién tuvo la culpa.\n\n## 2. No mueva los vehículos sin registro\nTome fotografías de las posiciones, placas, daños y del entorno. Anote nombres y teléfonos de testigos.\n\n## 3. Cuidado con lo que declara y firma\nAnte el **Organismo Operativo de Tránsito** limítese a los hechos. No firme acuerdos económicos ni reconocimientos de culpa sin asesoría legal.\n\n## 4. Llame a su abogado de guardia\nUn abogado presente en las primeras horas puede evitar la retención innecesaria del vehículo y orientar la conciliación.\n\n> Nuestro equipo atiende urgencias de tránsito **24/7**.",
+      "en": "## 1. Put medical care first\nIf anyone is injured, call emergency services. **SOAT** insurance covers medical expenses for any injured person, regardless of who was at fault.\n\n## 2. Don't move vehicles before documenting\nPhotograph positions, plates, damage and surroundings. Write down names and phone numbers of witnesses.\n\n## 3. Be careful with statements and signatures\nBefore the **Traffic Police (OOT)** stick to the facts. Do not sign financial agreements or admissions of fault without legal advice.\n\n## 4. Call your on-call lawyer\nA lawyer present in the first hours can prevent unnecessary vehicle impoundment and guide the settlement.\n\n> Our team handles traffic emergencies **24/7**."
+    }
+  },
+  {
+    "id": "finiquito-plazos-bolivia",
+    "date": "2026-09-28",
+    "author": "Abg. Daniela Quiroz",
+    "category": "laboral",
+    "image_url": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
+    "readingMinutes": 3,
+    "title": {
+      "es": "Finiquito en Bolivia: plazos de pago y qué revisar antes de firmar",
+      "en": "Final settlement in Bolivia: payment deadlines and what to check before signing"
+    },
+    "summary": {
+      "es": "El empleador tiene un plazo legal para pagar sus beneficios sociales. Conozca los conceptos que deben figurar en su finiquito.",
+      "en": "Employers have a legal deadline to pay severance benefits. Learn which items must appear in your settlement."
+    },
+    "content_md": {
+      "es": "## Plazo de pago\nLa normativa laboral boliviana establece que los beneficios sociales deben pagarse dentro de los **15 días calendario** siguientes a la conclusión de la relación laboral. El retraso puede generar una **multa del 30%** a favor del trabajador.\n\n## Conceptos habituales\n- Indemnización por tiempo de servicios (desde los 90 días de trabajo)\n- Desahucio, cuando corresponde\n- Aguinaldo y vacaciones proporcionales\n- Sueldos devengados\n\n## Antes de firmar\nVerifique que el cálculo use su **promedio salarial** de los últimos meses y que no existan descuentos sin respaldo. Si tiene dudas, pida que el finiquito sea visado ante el Ministerio de Trabajo.",
+      "en": "## Payment deadline\nBolivian labour regulations require severance benefits to be paid within **15 calendar days** after the employment ends. Late payment may trigger a **30% penalty** in favour of the employee.\n\n## Usual items\n- Length-of-service severance (from 90 days of work)\n- Notice pay (desahucio), when applicable\n- Proportional Christmas bonus and vacation\n- Unpaid salaries\n\n## Before you sign\nCheck that the calculation uses your **average salary** of recent months and that there are no unsupported deductions. If in doubt, ask for the settlement to be endorsed at the Ministry of Labour."
+    }
+  },
+  {
+    "id": "asistencia-familiar-como-se-fija",
+    "date": "2026-09-10",
+    "author": "Abg. Daniela Quiroz",
+    "category": "familia",
+    "image_url": "https://images.unsplash.com/photo-1588979355313-6711a095465f?auto=format&fit=crop&w=1200&q=80",
+    "readingMinutes": 3,
+    "title": {
+      "es": "Asistencia familiar: cómo se fija el monto y cómo cobrar pensiones atrasadas",
+      "en": "Child support: how the amount is set and how to collect arrears"
+    },
+    "summary": {
+      "es": "El juez considera las necesidades del beneficiario y la capacidad económica del obligado. Le explicamos el proceso.",
+      "en": "The judge weighs the beneficiary's needs against the paying parent's means. Here is how the process works."
+    },
+    "content_md": {
+      "es": "## ¿Cómo se determina el monto?\nEl juez evalúa las **necesidades** de quien la recibe (alimentación, educación, salud, vivienda) y la **capacidad económica** de quien debe pagar. La ley fija un monto mínimo referencial vinculado al Salario Mínimo Nacional.\n\n## Pensiones devengadas\nSi el obligado no paga, se puede solicitar la **liquidación** de lo adeudado y medidas de cumplimiento, que pueden incluir el apremio.\n\n## Documentos útiles\n- Certificado de nacimiento de los hijos\n- Comprobantes de gastos\n- Información sobre ingresos del obligado",
+      "en": "## How is the amount set?\nThe judge assesses the **needs** of the beneficiary (food, education, health, housing) and the **financial capacity** of the paying party. The law sets a minimum reference amount linked to the national minimum wage.\n\n## Arrears\nIf the obligor fails to pay, you can request a **settlement** of the amounts owed and enforcement measures, which may include coercive arrest.\n\n## Useful documents\n- Children's birth certificates\n- Proof of expenses\n- Information on the obligor's income"
+    }
+  },
+  {
+    "id": "saneamiento-inra-pasos",
+    "date": "2026-08-22",
+    "author": "Abg. Marcelo Zeballos",
+    "category": "agrario",
+    "image_url": "https://images.unsplash.com/photo-1693691265767-eea050b5963d?auto=format&fit=crop&w=1200&q=80",
+    "readingMinutes": 5,
+    "title": {
+      "es": "Saneamiento ante el INRA: etapas para obtener el título de su predio",
+      "en": "INRA land regularisation: steps to obtain your land title"
+    },
+    "summary": {
+      "es": "Desde las pericias de campo hasta el título ejecutorial: qué esperar y cómo evitar observaciones.",
+      "en": "From field surveys to the executive title: what to expect and how to avoid objections."
+    },
+    "content_md": {
+      "es": "## Etapas generales\n1. **Preparatoria**: diagnóstico y planificación del área.\n2. **Campo**: relevamiento de información, mensura y verificación de la Función Social o Económico-Social.\n3. **Resolución y titulación**: informe, resolución final y emisión del título ejecutorial.\n\n## Errores frecuentes\n- No presentarse a las pericias de campo\n- Linderos no consensuados con vecinos\n- Documentos de transferencia sin registrar\n\n## Recomendación\nUn seguimiento jurídico-técnico continuo reduce el riesgo de que su predio sea observado o declarado tierra fiscal.",
+      "en": "## General stages\n1. **Preparatory**: diagnosis and planning of the area.\n2. **Field work**: data collection, survey and verification of the Social or Economic-Social Function.\n3. **Resolution and titling**: report, final resolution and issuance of the executive title.\n\n## Common mistakes\n- Not attending field surveys\n- Boundaries not agreed with neighbours\n- Unregistered transfer documents\n\n## Recommendation\nContinuous legal-technical follow-up reduces the risk of your land being objected to or declared state land."
+    }
+  },
+  {
+    "id": "anticretico-precauciones",
+    "date": "2026-08-05",
+    "author": "Abg. Rodrigo Mamani",
+    "category": "civil",
+    "image_url": "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1200&q=80",
+    "readingMinutes": 3,
+    "title": {
+      "es": "Anticrético seguro: 5 verificaciones antes de entregar su dinero",
+      "en": "Safe anticrético: 5 checks before handing over your money"
+    },
+    "summary": {
+      "es": "El anticrético es muy común en La Paz, pero también una fuente frecuente de estafas. Proteja su inversión.",
+      "en": "Anticrético is very common in La Paz, but also a frequent source of fraud. Protect your investment."
+    },
+    "content_md": {
+      "es": "## Antes de firmar\n1. Solicite el **folio real** actualizado en Derechos Reales.\n2. Verifique que quien firma sea el **propietario registrado** o tenga poder suficiente.\n3. Confirme que el inmueble no tenga **gravámenes ni otros anticréticos** inscritos.\n4. Formalice el contrato ante **notario de fe pública**.\n5. **Inscriba** el anticrético en Derechos Reales para que sea oponible a terceros.\n\n> Una revisión legal previa cuesta mucho menos que recuperar su dinero en juicio.",
+      "en": "## Before signing\n1. Request the updated **property record (folio real)** from Derechos Reales.\n2. Verify the signer is the **registered owner** or holds sufficient power of attorney.\n3. Confirm there are no **liens or other anticréticos** registered.\n4. Execute the contract before a **notary public**.\n5. **Register** the anticrético in Derechos Reales so it is enforceable against third parties.\n\n> A prior legal review costs far less than recovering your money in court."
+    }
+  }
+]

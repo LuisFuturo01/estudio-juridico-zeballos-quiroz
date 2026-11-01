@@ -1,0 +1,383 @@
+{
+  "version": "1.0.0",
+  "config": {
+    "minScore": 2.5,
+    "emergencyMinScore": 3,
+    "relatedRatio": 0.6
+  },
+  "greeting": {
+    "es": "¡Hola! Soy el **Asistente Legal** de Zeballos Quiroz. Cuénteme brevemente su situación y le daré una orientación inicial. Si es una **emergencia**, escriba \"urgente\".",
+    "en": "Hello! I'm the Zeballos Quiroz **Legal Assistant**. Briefly describe your situation and I'll give you initial guidance. If it's an **emergency**, type \"urgent\"."
+  },
+  "quickChips": {
+    "es": ["Tuve un choque, ¿cubre el SOAT?", "¿Cuánto tarda un divorcio?", "Plazo para pagar mi finiquito", "Monto de asistencia familiar", "Titulación INRA", "¿Cuánto cuesta la consulta?", "¿Dónde están ubicados?"],
+    "en": ["I had a crash, does SOAT cover it?", "How long does a divorce take?", "Deadline to pay my settlement", "Child support amount", "INRA land titling", "How much is a consultation?", "Where are you located?"]
+  },
+  "fallback": {
+    "response": {
+      "es": "Gracias por escribirnos. No estoy seguro de haber entendido del todo su consulta, pero queremos ayudarle. Atendemos **Familia, Civil, Laboral, Agrario y Tránsito**. Puede elegir un tema abajo o hablar directamente con un abogado.",
+      "en": "Thank you for reaching out. I'm not sure I fully understood your question, but we want to help. We handle **Family, Civil, Labour, Agrarian and Traffic** matters. Pick a topic below or speak directly with a lawyer."
+    },
+    "suggestions": {
+      "es": ["Derecho de Familia", "Contratos y deudas", "Problema laboral", "Terrenos e INRA", "Accidente de tránsito"],
+      "en": ["Family law", "Contracts and debts", "Employment issue", "Land and INRA", "Traffic accident"]
+    },
+    "actions": [
+      { "type": "whatsapp", "label": { "es": "Hablar con un abogado", "en": "Talk to a lawyer" } }
+    ]
+  },
+  "intents": [
+    {
+      "id": "emergencia_general",
+      "category": "emergencia",
+      "emergency": true,
+      "priority": 1.4,
+      "keywords": {
+        "es": [
+          { "term": "urgente", "weight": 3 }, { "term": "urgencia", "weight": 3 }, { "term": "emergencia", "weight": 3 },
+          { "term": "arresto", "weight": 4 }, { "term": "arrest", "weight": 4 }, { "term": "detuvieron", "weight": 4 }, { "term": "me llevaron preso", "weight": 4 }, { "term": "detenid", "weight": 4 }, { "term": "aprehendid", "weight": 4 },
+          { "term": "fianza", "weight": 4 }, { "term": "celda", "weight": 3 }, { "term": "policia me llevo", "weight": 4 },
+          { "term": "accidente grave", "weight": 5 }, { "term": "herido", "weight": 3 }, { "term": "heridos", "weight": 3 }, { "term": "fallecid", "weight": 4 },
+          { "term": "muerto", "weight": 4 }, { "term": "atropell", "weight": 3 }, { "term": "ahora mismo", "weight": 2 }, { "term": "auxilio", "weight": 3 }, { "term": "ayuda ya", "weight": 3 }
+        ],
+        "en": [
+          { "term": "urgent", "weight": 3 }, { "term": "emergency", "weight": 3 }, { "term": "arrest", "weight": 4 }, { "term": "detained", "weight": 4 },
+          { "term": "jail", "weight": 4 }, { "term": "bail", "weight": 4 }, { "term": "custody police", "weight": 3 }, { "term": "serious accident", "weight": 5 },
+          { "term": "injured", "weight": 3 }, { "term": "dead", "weight": 4 }, { "term": "killed", "weight": 4 }, { "term": "run over", "weight": 3 },
+          { "term": "right now", "weight": 2 }, { "term": "help me now", "weight": 3 }
+        ]
+      },
+      "response": {
+        "es": "Entiendo que es una **situación urgente**. Mantenga la calma; estamos para ayudarle.\n\n• Si hay heridos, llame primero a emergencias (**110 Policía · 165 Ambulancia**).\n• **No firme** documentos ni acuerdos, y no declare sin un abogado presente.\n• Guarde fotos, nombres de testigos y el número de caso.\n\nNuestro **abogado de guardia 24/7** puede atenderle ahora mismo:",
+        "en": "I understand this is an **urgent situation**. Stay calm; we're here to help.\n\n• If anyone is injured, call emergency services first (**110 Police · 165 Ambulance**).\n• **Do not sign** documents or agreements, and don't give statements without a lawyer present.\n• Keep photos, witness names and the case number.\n\nOur **24/7 on-call lawyer** can assist you right now:"
+      },
+      "actions": [
+        { "type": "call_emergency", "label": { "es": "Llamar a guardia 24/7", "en": "Call 24/7 on-call" } },
+        { "type": "whatsapp_emergency", "label": { "es": "WhatsApp de urgencia", "en": "Emergency WhatsApp" } }
+      ]
+    },
+    {
+      "id": "saludo",
+      "category": "general",
+      "priority": 0.9,
+      "keywords": {
+        "es": [{ "term": "hola", "weight": 3 }, { "term": "buenos dias", "weight": 3 }, { "term": "buenas tardes", "weight": 3 }, { "term": "buenas noches", "weight": 3 }, { "term": "buenas", "weight": 2.5 }],
+        "en": [{ "term": "hello", "weight": 3 }, { "term": "hi", "weight": 3 }, { "term": "good morning", "weight": 3 }, { "term": "good afternoon", "weight": 3 }, { "term": "hey", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "¡Hola! Es un gusto saludarle. ¿En qué tema legal podemos orientarle hoy?",
+        "en": "Hello! It's a pleasure. Which legal matter can we help you with today?"
+      },
+      "suggestions": {
+        "es": ["Accidente de tránsito", "Divorcio", "Despido o finiquito", "Contratos y deudas", "Terrenos e INRA"],
+        "en": ["Traffic accident", "Divorce", "Dismissal or settlement", "Contracts and debts", "Land and INRA"]
+      }
+    },
+    {
+      "id": "gracias",
+      "category": "general",
+      "priority": 0.9,
+      "keywords": {
+        "es": [{ "term": "gracias", "weight": 3 }, { "term": "muchas gracias", "weight": 3 }, { "term": "muy amable", "weight": 3 }],
+        "en": [{ "term": "thanks", "weight": 3 }, { "term": "thank you", "weight": 3 }]
+      },
+      "response": {
+        "es": "¡Con gusto! Si desea, un abogado puede revisar su caso de forma personalizada.",
+        "en": "You're welcome! If you wish, a lawyer can review your case personally."
+      },
+      "actions": [{ "type": "scroll", "target": "contacto", "label": { "es": "Agendar consulta", "en": "Book a consultation" } }]
+    },
+    {
+      "id": "familia_general",
+      "category": "familia",
+      "priority": 1,
+      "keywords": {
+        "es": [
+          { "term": "familia", "weight": 2.5 }, { "term": "esposo", "weight": 1.5 }, { "term": "esposa", "weight": 1.5 }, { "term": "matrimonio", "weight": 2 },
+          { "term": "hijos", "weight": 1.5 }, { "term": "hijo", "weight": 1 }, { "term": "pareja", "weight": 1.5 }, { "term": "union libre", "weight": 2.5 },
+          { "term": "conyuge", "weight": 2 }, { "term": "violencia familiar", "weight": 3 }, { "term": "derecho de familia", "weight": 3 }
+        ],
+        "en": [
+          { "term": "family", "weight": 2.5 }, { "term": "husband", "weight": 1.5 }, { "term": "wife", "weight": 1.5 }, { "term": "marriage", "weight": 2 },
+          { "term": "children", "weight": 1.5 }, { "term": "spouse", "weight": 2 }, { "term": "partner", "weight": 1.5 }, { "term": "family law", "weight": 3 }
+        ]
+      },
+      "response": {
+        "es": "En **Derecho de Familia** le acompañamos en divorcios, asistencia familiar, guarda de hijos, régimen de visitas y división de bienes. Buscamos primero acuerdos que protejan a sus hijos y, si no es posible, litigamos con firmeza. ¿Su consulta es sobre alguno de estos temas?",
+        "en": "In **Family Law** we assist with divorce, child support, custody, visitation and division of property. We seek agreements that protect your children first and, if that isn't possible, we litigate firmly. Is your question about one of these topics?"
+      },
+      "suggestions": {
+        "es": ["¿Cuánto tarda un divorcio?", "Monto de asistencia familiar", "Guarda de mis hijos", "División de bienes"],
+        "en": ["How long does a divorce take?", "Child support amount", "Custody of my children", "Division of property"]
+      }
+    },
+    {
+      "id": "divorcio_tiempo",
+      "category": "familia",
+      "priority": 1.2,
+      "keywords": {
+        "es": [
+          { "term": "divorci", "weight": 4 }, { "term": "separarme", "weight": 2.5 }, { "term": "separacion", "weight": 2 },
+          { "term": "cuanto tarda", "weight": 1.5 }, { "term": "tiempo", "weight": 1 }, { "term": "demora", "weight": 1 }, { "term": "mutuo acuerdo", "weight": 2 }
+        ],
+        "en": [
+          { "term": "divorc", "weight": 4 }, { "term": "separation", "weight": 2 }, { "term": "how long", "weight": 1.5 }, { "term": "time", "weight": 1 }, { "term": "mutual agreement", "weight": 2 }
+        ]
+      },
+      "response": {
+        "es": "El tiempo de un **divorcio** depende de la vía:\n\n• **Mutuo acuerdo sin hijos menores ni bienes por dividir**: puede tramitarse por vía notarial o registral en pocas semanas.\n• **Mutuo acuerdo judicial** (con hijos o bienes): generalmente algunos meses.\n• **Contencioso** (sin acuerdo): puede superar un año según la prueba y los recursos.\n\nNecesitará el certificado de matrimonio, de nacimiento de los hijos y la documentación de bienes. Un abogado puede indicarle la vía más rápida para su caso.",
+        "en": "The length of a **divorce** depends on the route:\n\n• **Uncontested, with no minor children or property to divide**: can be processed through a notary or the civil registry within a few weeks.\n• **Uncontested in court** (with children or property): usually a few months.\n• **Contested**: may exceed a year depending on evidence and appeals.\n\nYou'll need the marriage certificate, children's birth certificates and property documents. A lawyer can tell you the fastest route for your case."
+      },
+      "suggestions": {
+        "es": ["Monto de asistencia familiar", "Guarda de mis hijos", "División de bienes"],
+        "en": ["Child support amount", "Custody of my children", "Division of property"]
+      },
+      "actions": [{ "type": "scroll", "target": "contacto", "label": { "es": "Agendar consulta de familia", "en": "Book a family consultation" } }]
+    },
+    {
+      "id": "asistencia_familiar_montos",
+      "category": "familia",
+      "priority": 1.25,
+      "keywords": {
+        "es": [
+          { "term": "asistencia familiar", "weight": 5 }, { "term": "pension", "weight": 2.5 }, { "term": "pension alimenticia", "weight": 4 }, { "term": "alimentos", "weight": 1.5 },
+          { "term": "manutencion", "weight": 3 }, { "term": "monto", "weight": 1.5 }, { "term": "cuanto debe pagar", "weight": 2 }, { "term": "no paga", "weight": 1.5 }, { "term": "no me paga", "weight": 1.5 }, { "term": "devengad", "weight": 2.5 }
+        ],
+        "en": [
+          { "term": "child support", "weight": 5 }, { "term": "alimony", "weight": 4 }, { "term": "maintenance", "weight": 3 }, { "term": "amount", "weight": 1.5 },
+          { "term": "doesn't pay", "weight": 1.5 }, { "term": "not paying", "weight": 1.5 }, { "term": "arrears", "weight": 2.5 }
+        ]
+      },
+      "response": {
+        "es": "La **asistencia familiar** la fija el juez considerando dos factores: las **necesidades** de quien la recibe (alimentación, educación, salud, vivienda) y la **capacidad económica** de quien debe pagarla. La ley establece un **mínimo referencial vinculado al Salario Mínimo Nacional** por beneficiario.\n\nSi el obligado no paga, puede pedirse la **liquidación de pensiones devengadas** y medidas de cumplimiento, incluido el apremio. Lleve certificados de nacimiento y comprobantes de gastos a su consulta.",
+        "en": "**Child support** is set by the judge based on two factors: the **needs** of the beneficiary (food, education, health, housing) and the **financial capacity** of the paying party. The law sets a **minimum reference amount linked to the national minimum wage** per beneficiary.\n\nIf the obligor doesn't pay, you can request a **settlement of arrears** and enforcement measures, including coercive arrest. Bring birth certificates and proof of expenses to your consultation."
+      },
+      "suggestions": {
+        "es": ["¿Cuánto tarda un divorcio?", "Guarda de mis hijos", "¿Cuánto cuesta la consulta?"],
+        "en": ["How long does a divorce take?", "Custody of my children", "How much is a consultation?"]
+      },
+      "actions": [{ "type": "whatsapp", "label": { "es": "Consultar mi caso", "en": "Ask about my case" } }]
+    },
+    {
+      "id": "guarda_custodia",
+      "category": "familia",
+      "priority": 1.15,
+      "keywords": {
+        "es": [{ "term": "guarda", "weight": 4 }, { "term": "custodia", "weight": 4 }, { "term": "tenencia", "weight": 3.5 }, { "term": "visitas", "weight": 3 }, { "term": "ver a mis hijos", "weight": 3.5 }, { "term": "quitar a mis hijos", "weight": 3.5 }],
+        "en": [{ "term": "custody", "weight": 4 }, { "term": "visitation", "weight": 3.5 }, { "term": "see my children", "weight": 3.5 }, { "term": "guardianship", "weight": 3.5 }]
+      },
+      "response": {
+        "es": "La **guarda** de los hijos se decide siempre según el **interés superior** de niñas, niños y adolescentes. Puede acordarse entre los padres o fijarse judicialmente, junto con un **régimen de visitas** para el otro progenitor. En situaciones de riesgo pueden solicitarse **medidas de protección** provisionales. Le recomendamos reunir pruebas sobre el cuidado diario de los menores (colegio, salud, vivienda).",
+        "en": "**Custody** is always decided according to the **best interests** of the child. It can be agreed between parents or set by the court, together with a **visitation schedule** for the other parent. In risky situations, provisional **protective measures** can be requested. We recommend gathering evidence of the children's daily care (school, health, housing)."
+      },
+      "suggestions": { "es": ["Monto de asistencia familiar", "¿Cuánto tarda un divorcio?"], "en": ["Child support amount", "How long does a divorce take?"] }
+    },
+    {
+      "id": "particion_bienes",
+      "category": "familia",
+      "priority": 1.1,
+      "keywords": {
+        "es": [{ "term": "particion", "weight": 3 }, { "term": "division de bienes", "weight": 4.5 }, { "term": "gananciales", "weight": 4 }, { "term": "bienes comunes", "weight": 3.5 }, { "term": "repartir", "weight": 2 }],
+        "en": [{ "term": "division of property", "weight": 4.5 }, { "term": "marital property", "weight": 4 }, { "term": "split assets", "weight": 3.5 }, { "term": "partition", "weight": 3 }]
+      },
+      "response": {
+        "es": "Los **bienes gananciales** (adquiridos durante el matrimonio o unión libre) se dividen, por regla general, en partes iguales. Los bienes propios (anteriores a la unión, herencias o donaciones) no se dividen. Es clave contar con folios reales, facturas y extractos para demostrar cuándo y cómo se adquirió cada bien.",
+        "en": "**Marital property** (acquired during the marriage or de facto union) is, as a rule, divided equally. Separate property (owned before the union, inherited or donated) is not divided. Property records, invoices and statements are key to prove when and how each asset was acquired."
+      }
+    },
+    {
+      "id": "civil_general",
+      "category": "civil",
+      "priority": 1,
+      "keywords": {
+        "es": [{ "term": "civil", "weight": 2.5 }, { "term": "contrato", "weight": 3 }, { "term": "anticretico", "weight": 3.5 }, { "term": "alquiler", "weight": 2.5 }, { "term": "inquilino", "weight": 2.5 }, { "term": "desalojo", "weight": 3 }, { "term": "compraventa", "weight": 3 }, { "term": "herencia", "weight": 2.5 }, { "term": "usucapion", "weight": 3.5 }],
+        "en": [{ "term": "civil", "weight": 2.5 }, { "term": "contract", "weight": 3 }, { "term": "lease", "weight": 2.5 }, { "term": "rent", "weight": 2 }, { "term": "tenant", "weight": 2.5 }, { "term": "eviction", "weight": 3 }, { "term": "purchase agreement", "weight": 3 }, { "term": "inheritance", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "En **Derecho Civil** redactamos y revisamos contratos (compraventa, **anticrético**, alquiler, préstamo), gestionamos desalojos, usucapiones y sucesiones. **Consejo clave**: antes de firmar o entregar dinero, verifique el folio real en Derechos Reales y que quien firma sea el propietario registrado.",
+        "en": "In **Civil Law** we draft and review contracts (sale, **anticrético**, lease, loan) and handle evictions, adverse possession and inheritance. **Key tip**: before signing or paying, check the property record in Derechos Reales and make sure the signer is the registered owner."
+      },
+      "suggestions": { "es": ["Me deben dinero", "Saneamiento en Derechos Reales", "¿Cuánto cuesta la consulta?"], "en": ["Someone owes me money", "Title clearance in Derechos Reales", "How much is a consultation?"] }
+    },
+    {
+      "id": "cobro_deudas",
+      "category": "civil",
+      "priority": 1.15,
+      "keywords": {
+        "es": [{ "term": "cobro", "weight": 3 }, { "term": "cobrar", "weight": 3 }, { "term": "deuda", "weight": 3 }, { "term": "me debe", "weight": 3.5 }, { "term": "me deben", "weight": 3.5 }, { "term": "prestamo", "weight": 2.5 }, { "term": "letra de cambio", "weight": 4 }, { "term": "pagare", "weight": 4 }, { "term": "cheque", "weight": 2.5 }, { "term": "coactivo", "weight": 3.5 }],
+        "en": [{ "term": "debt", "weight": 3 }, { "term": "owes me", "weight": 3.5 }, { "term": "owe me", "weight": 3.5 }, { "term": "collect", "weight": 3 }, { "term": "loan", "weight": 2.5 }, { "term": "promissory note", "weight": 4 }, { "term": "check", "weight": 1.5 }]
+      },
+      "response": {
+        "es": "Para el **cobro de deudas** el camino depende del documento que tenga: con **letra de cambio, pagaré o documento reconocido** se puede iniciar un **proceso ejecutivo**, más rápido y con posibilidad de embargo. Sin título ejecutivo, se evalúa un proceso monitorio u ordinario. Primero intentamos una conciliación; si no prospera, actuamos judicialmente. Revise también que la deuda no haya **prescrito**.",
+        "en": "For **debt collection**, the route depends on the document you hold: with a **bill of exchange, promissory note or acknowledged document** we can start an **executive proceeding**, faster and with the possibility of attachment. Without an enforceable title, a summary or ordinary proceeding is assessed. We first try conciliation; if it fails, we go to court. Also check the debt hasn't become **time-barred**."
+      },
+      "actions": [{ "type": "whatsapp", "label": { "es": "Revisar mi documento", "en": "Review my document" } }]
+    },
+    {
+      "id": "ddrr_saneamiento",
+      "category": "civil",
+      "priority": 1.15,
+      "keywords": {
+        "es": [{ "term": "derechos reales", "weight": 5 }, { "term": "ddrr", "weight": 5 }, { "term": "folio real", "weight": 4.5 }, { "term": "saneamiento", "weight": 2 }, { "term": "papeles de mi casa", "weight": 4 }, { "term": "inscribir", "weight": 2.5 }, { "term": "registro de propiedad", "weight": 4 }, { "term": "testimonio", "weight": 2 }, { "term": "catastro", "weight": 2.5 }],
+        "en": [{ "term": "property registry", "weight": 5 }, { "term": "derechos reales", "weight": 5 }, { "term": "ddrr", "weight": 5 }, { "term": "title deed", "weight": 4 }, { "term": "register property", "weight": 4 }, { "term": "clear title", "weight": 4 }]
+      },
+      "response": {
+        "es": "El **saneamiento en Derechos Reales (DDRR)** permite que su inmueble tenga documentación limpia y oponible a terceros. Incluye la inscripción de la compraventa, corrección de datos técnicos o personales, cancelación de gravámenes y, si falta, la regularización mediante usucapión. Para empezar necesitamos su **testimonio**, el **folio real** y el plano aprobado o datos catastrales.",
+        "en": "**Title clearance at Derechos Reales (DDRR)** ensures your property has clean documentation enforceable against third parties. It includes registering the sale, correcting technical or personal data, cancelling liens and, if needed, regularising through adverse possession. To start we need your **deed (testimonio)**, the **property record (folio real)** and the approved plan or cadastral data."
+      }
+    },
+    {
+      "id": "laboral_general",
+      "category": "laboral",
+      "priority": 1,
+      "keywords": {
+        "es": [{ "term": "laboral", "weight": 3 }, { "term": "trabajo", "weight": 2 }, { "term": "empleador", "weight": 2.5 }, { "term": "jefe", "weight": 2 }, { "term": "sueldo", "weight": 2.5 }, { "term": "salario", "weight": 2.5 }, { "term": "beneficios sociales", "weight": 4 }, { "term": "aguinaldo", "weight": 3 }, { "term": "vacaciones", "weight": 2 }, { "term": "ministerio de trabajo", "weight": 4 }, { "term": "afp", "weight": 2.5 }, { "term": "gestora", "weight": 2.5 }],
+        "en": [{ "term": "labour", "weight": 3 }, { "term": "labor", "weight": 3 }, { "term": "employment", "weight": 3 }, { "term": "employer", "weight": 2.5 }, { "term": "boss", "weight": 2 }, { "term": "salary", "weight": 2.5 }, { "term": "wages", "weight": 2.5 }, { "term": "severance", "weight": 3.5 }, { "term": "ministry of labour", "weight": 4 }, { "term": "bonus", "weight": 2 }]
+      },
+      "response": {
+        "es": "En **Derecho Laboral** defendemos a trabajadores y asesoramos a empleadores: cálculo de **beneficios sociales** (indemnización, desahucio, aguinaldo, vacaciones), despidos, reincorporación y trámites ante la **Jefatura Departamental de Trabajo**. Guarde sus boletas de pago, contrato y mensajes: son su mejor prueba.",
+        "en": "In **Labour Law** we represent employees and advise employers: calculation of **severance benefits** (indemnity, notice pay, Christmas bonus, vacation), dismissals, reinstatement and procedures before the **Departmental Labour Office**. Keep your payslips, contract and messages: they are your best evidence."
+      },
+      "suggestions": { "es": ["Plazo para pagar mi finiquito", "Me despidieron sin motivo"], "en": ["Deadline to pay my settlement", "I was fired without cause"] }
+    },
+    {
+      "id": "finiquito_plazo",
+      "category": "laboral",
+      "priority": 1.25,
+      "keywords": {
+        "es": [{ "term": "finiquito", "weight": 5 }, { "term": "liquidacion", "weight": 2.5 }, { "term": "plazo", "weight": 1.5 }, { "term": "no me pagan", "weight": 2 }, { "term": "indemnizacion", "weight": 3 }, { "term": "desahucio", "weight": 3.5 }, { "term": "renuncie", "weight": 2.5 }, { "term": "renuncia", "weight": 2 }],
+        "en": [{ "term": "final settlement", "weight": 5 }, { "term": "finiquito", "weight": 5 }, { "term": "deadline", "weight": 1.5 }, { "term": "severance pay", "weight": 4 }, { "term": "notice pay", "weight": 3.5 }, { "term": "resigned", "weight": 2.5 }, { "term": "quit my job", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "Por norma general, el empleador debe pagar los **beneficios sociales** dentro de los **15 días calendario** siguientes al fin de la relación laboral; el retraso puede generar una **multa del 30%** a su favor.\n\nSu finiquito suele incluir: **indemnización** (desde los 90 días trabajados, en caso de retiro o despido), **desahucio** si fue despedido sin preaviso, **aguinaldo y vacaciones** proporcionales y sueldos pendientes. Antes de firmar, verifique que se use su **promedio salarial** correcto.",
+        "en": "As a general rule, employers must pay **severance benefits** within **15 calendar days** after the employment ends; late payment may trigger a **30% penalty** in your favour.\n\nYour settlement usually includes: **indemnity** (from 90 days worked, upon dismissal or eligible resignation), **notice pay** if dismissed without notice, proportional **Christmas bonus and vacation**, and pending salaries. Before signing, check that the correct **average salary** is used."
+      },
+      "actions": [{ "type": "whatsapp", "label": { "es": "Revisar mi finiquito", "en": "Review my settlement" } }]
+    },
+    {
+      "id": "despido",
+      "category": "laboral",
+      "priority": 1.2,
+      "keywords": {
+        "es": [{ "term": "despid", "weight": 4.5 }, { "term": "me botaron", "weight": 4.5 }, { "term": "me echaron", "weight": 4.5 }, { "term": "sin motivo", "weight": 2 }, { "term": "injustificado", "weight": 3 }, { "term": "reincorporacion", "weight": 4 }, { "term": "embarazada", "weight": 2.5 }, { "term": "inamovilidad", "weight": 3.5 }],
+        "en": [{ "term": "fired", "weight": 4.5 }, { "term": "dismissed", "weight": 4.5 }, { "term": "laid off", "weight": 4 }, { "term": "without cause", "weight": 2 }, { "term": "unfair dismissal", "weight": 4.5 }, { "term": "reinstatement", "weight": 4 }, { "term": "pregnant", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "Ante un **despido** usted tiene dos caminos: solicitar la **reincorporación** a su fuente laboral o el **pago de beneficios sociales** (con desahucio si no hubo preaviso). Hay casos de **inamovilidad** especial (por ejemplo, embarazo o padres de menores de un año) que refuerzan su protección. El primer paso suele ser una denuncia ante la **Jefatura Departamental de Trabajo**. No firme nada sin revisar el cálculo.",
+        "en": "After a **dismissal** you have two paths: request **reinstatement** or claim **severance benefits** (with notice pay if no notice was given). Special **job-protection** cases (e.g. pregnancy or parents of children under one year) strengthen your position. The first step is usually a complaint before the **Departmental Labour Office**. Don't sign anything without checking the calculation."
+      },
+      "suggestions": { "es": ["Plazo para pagar mi finiquito", "¿Cuánto cuesta la consulta?"], "en": ["Deadline to pay my settlement", "How much is a consultation?"] }
+    },
+    {
+      "id": "agrario_general",
+      "category": "agrario",
+      "priority": 1,
+      "keywords": {
+        "es": [{ "term": "agrari", "weight": 3.5 }, { "term": "terreno", "weight": 2.5 }, { "term": "lote", "weight": 2 }, { "term": "predio", "weight": 3 }, { "term": "parcela", "weight": 3 }, { "term": "comunidad", "weight": 1.5 }, { "term": "rural", "weight": 2.5 }, { "term": "avasall", "weight": 4 }, { "term": "agroambiental", "weight": 4 }, { "term": "lindero", "weight": 4 }, { "term": "colindante", "weight": 3.5 }],
+        "en": [{ "term": "agrarian", "weight": 3.5 }, { "term": "land", "weight": 2.5 }, { "term": "plot", "weight": 2.5 }, { "term": "rural", "weight": 2.5 }, { "term": "farm", "weight": 2.5 }, { "term": "boundary", "weight": 4 }, { "term": "boundaries", "weight": 4 }, { "term": "squatters", "weight": 4 }, { "term": "land invasion", "weight": 4 }, { "term": "agro-environmental", "weight": 4 }]
+      },
+      "response": {
+        "es": "En **Derecho Agrario** atendemos conflictos de **linderos**, avasallamientos, posesión y transferencias de predios rurales, con procesos ante los **Juzgados Agroambientales**. En disputas de linderos es clave contar con planos georreferenciados y testigos de la posesión. Si su predio aún no tiene título, el camino es el **saneamiento ante el INRA**.",
+        "en": "In **Agrarian Law** we handle **boundary** disputes, land invasions, possession and transfers of rural land, with proceedings before the **Agro-environmental Courts**. In boundary disputes, georeferenced plans and possession witnesses are key. If your land doesn't yet have a title, the route is **INRA regularisation**."
+      },
+      "suggestions": { "es": ["Titulación INRA", "¿Dónde están ubicados?"], "en": ["INRA land titling", "Where are you located?"] }
+    },
+    {
+      "id": "inra_titulacion",
+      "category": "agrario",
+      "priority": 1.25,
+      "keywords": {
+        "es": [{ "term": "inra", "weight": 5 }, { "term": "titulacion", "weight": 4 }, { "term": "titular", "weight": 2 }, { "term": "titulo ejecutorial", "weight": 5 }, { "term": "saneamiento", "weight": 2.5 }, { "term": "pericias de campo", "weight": 4 }, { "term": "funcion social", "weight": 4 }],
+        "en": [{ "term": "inra", "weight": 5 }, { "term": "titling", "weight": 4 }, { "term": "land title", "weight": 4 }, { "term": "regularisation", "weight": 3 }, { "term": "regularization", "weight": 3 }, { "term": "field survey", "weight": 3.5 }]
+      },
+      "response": {
+        "es": "El **saneamiento y titulación ante el INRA** tiene tres grandes etapas: **preparatoria**, **de campo** (mensura y verificación del cumplimiento de la Función Social o Económico-Social) y **de resolución y titulación**, que concluye con el **título ejecutorial**, que luego se inscribe en Derechos Reales.\n\nErrores que más retrasan: no asistir a las pericias de campo, linderos no consensuados y transferencias sin registrar. Le acompañamos con seguimiento jurídico y técnico.",
+        "en": "**INRA land regularisation and titling** has three main stages: **preparatory**, **field work** (survey and verification of the Social or Economic-Social Function) and **resolution and titling**, ending with the **executive title**, which is then registered at Derechos Reales.\n\nMost common delays: missing the field surveys, boundaries not agreed with neighbours, and unregistered transfers. We support you with legal and technical follow-up."
+      },
+      "actions": [{ "type": "scroll", "target": "contacto", "label": { "es": "Agendar consulta agraria", "en": "Book an agrarian consultation" } }]
+    },
+    {
+      "id": "transito_general",
+      "category": "transito",
+      "priority": 1,
+      "keywords": {
+        "es": [{ "term": "transito", "weight": 3.5 }, { "term": "accidente", "weight": 3 }, { "term": "vehiculo", "weight": 2 }, { "term": "auto", "weight": 1.5 }, { "term": "carro", "weight": 1.5 }, { "term": "moto", "weight": 1.5 }, { "term": "licencia", "weight": 2 }, { "term": "multa", "weight": 1.5 }, { "term": "alcoholemia", "weight": 3.5 }, { "term": "operativo", "weight": 2 }, { "term": "retenido", "weight": 2.5 }],
+        "en": [{ "term": "traffic", "weight": 3.5 }, { "term": "accident", "weight": 3 }, { "term": "vehicle", "weight": 2 }, { "term": "car", "weight": 1.5 }, { "term": "motorcycle", "weight": 1.5 }, { "term": "license", "weight": 2 }, { "term": "breathalyser", "weight": 3.5 }, { "term": "breathalyzer", "weight": 3.5 }, { "term": "impounded", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "En **Tránsito y Accidentes** brindamos asistencia **24/7**: acompañamiento ante el **Organismo Operativo de Tránsito**, recuperación de vehículos retenidos, activación del **SOAT**, conciliación por daños y querellas o defensa penal. Si el accidente acaba de ocurrir, **no firme acuerdos** ni reconozca culpa sin un abogado.",
+        "en": "In **Traffic & Accidents** we provide **24/7** assistance: support before the **Traffic Police (OOT)**, release of impounded vehicles, **SOAT** claims, damage settlements and criminal complaints or defence. If the accident just happened, **don't sign agreements** or admit fault without a lawyer."
+      },
+      "suggestions": { "es": ["Tuve un choque, ¿cubre el SOAT?", "Es urgente"], "en": ["I had a crash, does SOAT cover it?", "It's urgent"] },
+      "actions": [{ "type": "whatsapp_emergency", "label": { "es": "Guardia de tránsito 24/7", "en": "24/7 traffic on-call" } }]
+    },
+    {
+      "id": "choque_transito_soat",
+      "category": "transito",
+      "priority": 1.3,
+      "keywords": {
+        "es": [{ "term": "choque", "weight": 4 },{ "term": "choco", "weight": 4 }, { "term": "chocaron", "weight": 4 }, { "term": "colision", "weight": 3.5 }, { "term": "soat", "weight": 5 }, { "term": "seguro", "weight": 2 }, { "term": "danos", "weight": 1.5 }, { "term": "conciliacion", "weight": 1.5 }, { "term": "gastos medicos", "weight": 2.5 }],
+        "en": [{ "term": "crash", "weight": 4 }, { "term": "collision", "weight": 3.5 }, { "term": "hit my car", "weight": 4 }, { "term": "soat", "weight": 5 }, { "term": "insurance", "weight": 2 }, { "term": "damages", "weight": 1.5 }, { "term": "medical expenses", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "Tras un **choque**:\n\n• El **SOAT** cubre **gastos médicos, incapacidad o fallecimiento** de cualquier persona lesionada, **sin importar quién tuvo la culpa**. No cubre daños materiales al vehículo; esos se reclaman al responsable o a su seguro particular.\n• Tome fotos de posiciones, placas y daños; anote testigos.\n• Ante el **Organismo Operativo de Tránsito** limítese a los hechos y no firme acuerdos sin asesoría.\n• La **conciliación** por daños es posible y suele ser la vía más rápida; si hay lesiones graves, puede corresponder una **querella penal**.",
+        "en": "After a **crash**:\n\n• **SOAT** covers **medical expenses, disability or death** of any injured person, **regardless of fault**. It does not cover vehicle damage; that is claimed from the responsible party or their private insurer.\n• Photograph positions, plates and damage; note witnesses.\n• Before the **Traffic Police (OOT)** stick to the facts and don't sign agreements without advice.\n• A **settlement** for damages is possible and often fastest; with serious injuries, a **criminal complaint** may apply."
+      },
+      "actions": [
+        { "type": "whatsapp_emergency", "label": { "es": "Hablar con guardia 24/7", "en": "Talk to 24/7 on-call" } },
+        { "type": "call_emergency", "label": { "es": "Llamar ahora", "en": "Call now" } }
+      ]
+    },
+    {
+      "id": "costo_consulta",
+      "category": "general",
+      "priority": 1.1,
+      "keywords": {
+        "es": [{ "term": "costo", "weight": 3.5 }, { "term": "cuesta", "weight": 3.5 }, { "term": "cuanto cobran", "weight": 4.5 }, { "term": "precio", "weight": 3.5 }, { "term": "honorarios", "weight": 4 }, { "term": "tarifa", "weight": 3.5 }, { "term": "gratis", "weight": 3 }, { "term": "gratuita", "weight": 3 }, { "term": "consulta", "weight": 1 }],
+        "en": [{ "term": "cost", "weight": 3.5 }, { "term": "price", "weight": 3.5 }, { "term": "fee", "weight": 3.5 }, { "term": "fees", "weight": 3.5 }, { "term": "how much", "weight": 2.5 }, { "term": "free", "weight": 2.5 }, { "term": "consultation", "weight": 1 }, { "term": "charge", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "Nuestra **consulta inicial** permite analizar su caso, explicarle sus opciones y presentarle un **presupuesto claro y por escrito** antes de iniciar cualquier trámite. El costo depende del área y la complejidad; se lo confirmamos al agendar. Ofrecemos facilidades de pago según el tipo de proceso.",
+        "en": "Our **initial consultation** lets us analyse your case, explain your options and give you a **clear written quote** before starting any procedure. The cost depends on the area and complexity; we confirm it when you book. Payment plans are available depending on the type of case."
+      },
+      "actions": [
+        { "type": "scroll", "target": "contacto", "label": { "es": "Agendar consulta", "en": "Book a consultation" } },
+        { "type": "whatsapp", "label": { "es": "Consultar por WhatsApp", "en": "Ask via WhatsApp" } }
+      ]
+    },
+    {
+      "id": "ubicacion",
+      "category": "general",
+      "priority": 1.1,
+      "keywords": {
+        "es": [{ "term": "donde", "weight": 2.5 }, { "term": "ubicacion", "weight": 4 }, { "term": "ubicados", "weight": 4 }, { "term": "direccion", "weight": 4 }, { "term": "oficina", "weight": 3 }, { "term": "como llego", "weight": 4 }, { "term": "la paz", "weight": 1 }, { "term": "el alto", "weight": 1.5 }, { "term": "horario", "weight": 3.5 }, { "term": "atienden", "weight": 2.5 }],
+        "en": [{ "term": "where", "weight": 2.5 }, { "term": "location", "weight": 4 }, { "term": "located", "weight": 4 }, { "term": "address", "weight": 4 }, { "term": "office", "weight": 3 }, { "term": "directions", "weight": 4 }, { "term": "opening hours", "weight": 4 }, { "term": "hours", "weight": 3 }]
+      },
+      "response": {
+        "es": "Nos encontramos en **{{address}}, {{city}}**.\n\n🕘 {{hours}}\n📞 {{phone}}\n✉️ {{email}}\n\nTambién atendemos consultas virtuales para clientes de El Alto, provincias y el exterior.",
+        "en": "We are located at **{{address}}, {{city}}**.\n\n🕘 {{hours}}\n📞 {{phone}}\n✉️ {{email}}\n\nWe also offer virtual consultations for clients in El Alto, the provinces and abroad."
+      },
+      "actions": [
+        { "type": "link", "target": "maps", "label": { "es": "Ver en Google Maps", "en": "Open in Google Maps" } },
+        { "type": "call", "label": { "es": "Llamar", "en": "Call" } }
+      ]
+    },
+    {
+      "id": "agendar_cita",
+      "category": "general",
+      "priority": 1.05,
+      "keywords": {
+        "es": [{ "term": "agendar", "weight": 4 }, { "term": "cita", "weight": 3.5 }, { "term": "reunion", "weight": 3 }, { "term": "hablar con un abogado", "weight": 4.5 }, { "term": "contratar", "weight": 3 }, { "term": "contacto", "weight": 2.5 }, { "term": "telefono", "weight": 3 }, { "term": "whatsapp", "weight": 3 }],
+        "en": [{ "term": "book", "weight": 3.5 }, { "term": "appointment", "weight": 4 }, { "term": "schedule", "weight": 3.5 }, { "term": "meeting", "weight": 3 }, { "term": "talk to a lawyer", "weight": 4.5 }, { "term": "hire", "weight": 3 }, { "term": "phone", "weight": 3 }, { "term": "contact", "weight": 2.5 }]
+      },
+      "response": {
+        "es": "¡Con gusto! Puede **agendar una consulta** completando el formulario de contacto o escribiéndonos directamente por WhatsApp. Un abogado le responderá a la brevedad dentro del horario de atención.",
+        "en": "Gladly! You can **book a consultation** by filling out the contact form or messaging us directly on WhatsApp. A lawyer will reply shortly during office hours."
+      },
+      "actions": [
+        { "type": "scroll", "target": "contacto", "label": { "es": "Ir al formulario", "en": "Go to the form" } },
+        { "type": "whatsapp", "label": { "es": "Escribir por WhatsApp", "en": "Message on WhatsApp" } }
+      ]
+    }
+  ]
+}

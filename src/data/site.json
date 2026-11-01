@@ -1,0 +1,30 @@
+{
+  "_comment": "Rutas de imágenes y recursos visuales del sitio. Reemplace las URL de Unsplash por fotos propias (p. ej. /images/hero/portada.jpg dentro de /public).",
+  "brand": {
+    "mark": "/images/brand/logo-mark.png",
+    "wordmark": "/images/brand/logo-wordmark.png",
+    "full": "/images/brand/logo-full.png"
+  },
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1637589267610-6c66fc2a086b?auto=format&fit=crop&w=1100&q=80&h=1300",
+    "alt": {
+      "es": "Abogada del estudio con traje ejecutivo",
+      "en": "Firm attorney in executive attire"
+    },
+    "credit": "Unsplash"
+  },
+  "about": {
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
+    "alt": {
+      "es": "Reunión de asesoría legal con clientes",
+      "en": "Legal advisory meeting with clients"
+    }
+  },
+  "contact": {
+    "backgroundImage": "https://images.unsplash.com/photo-1596118769843-08e9ad381ab0?auto=format&fit=crop&w=1800&q=80",
+    "alt": {
+      "es": "Vista de La Paz con el Illimani",
+      "en": "View of La Paz with Mount Illimani"
+    }
+  }
+}

@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-steel-100 font-sans text-ink;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold-400 ring-offset-2 ring-offset-transparent;
+  }
+  ::selection {
+    @apply bg-gold-300 text-graphite-950;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 3xl:max-w-[1600px];
+  }
+  .section {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold-700;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply h-1.5 w-1.5 rounded-full bg-gold-500;
+  }
+  .eyebrow-light {
+    @apply border-gold-300/30 bg-gold-300/10 text-gold-200;
+  }
+  .section-title {
+    @apply mt-5 text-3xl font-bold leading-[1.1] text-graphite-900 sm:text-4xl lg:text-[3.25rem];
+  }
+  .section-subtitle {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg;
+  }
+  .text-gold-gradient {
+    @apply bg-gold-sheen bg-clip-text text-transparent;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-gold {
+    @apply btn bg-gold-sheen text-graphite-950 shadow-gold hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0;
+  }
+  .btn-dark {
+    @apply btn bg-graphite-900 text-white shadow-soft hover:-translate-y-0.5 hover:bg-graphite-700;
+  }
+  .btn-glass {
+    @apply btn border border-white/20 bg-white/10 text-white backdrop-blur-md hover:border-gold-300/60 hover:bg-white/15;
+  }
+  .btn-outline {
+    @apply btn border border-graphite-900/15 bg-white/60 text-graphite-900 hover:border-gold-500 hover:text-gold-700;
+  }
+
+  .card {
+    @apply rounded-3xl border border-white/70 bg-white/80 shadow-soft backdrop-blur transition-all duration-300 ease-in-out;
+  }
+  .glass-dark {
+    @apply border border-white/10 bg-white/[0.06] shadow-glass backdrop-blur-xl;
+  }
+  .glass-light {
+    @apply border border-white/60 bg-white/70 shadow-soft backdrop-blur-xl;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ease-in-out;
+  }
+  .chip-idle {
+    @apply chip bg-white/70 text-graphite-700 ring-1 ring-steel-300 hover:bg-white hover:text-graphite-900 hover:ring-gold-500;
+  }
+  .chip-active {
+    @apply chip bg-graphite-900 text-gold-200 shadow-soft ring-1 ring-graphite-900;
+  }
+  .badge-gold {
+    @apply inline-flex items-center rounded-full border border-gold-300/40 bg-gold-300/15 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-gold-100 backdrop-blur;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-steel-300 bg-white/90 px-4 py-3 text-sm text-ink placeholder:text-graphite-400 transition-all duration-300 focus:border-gold-500 focus:outline-none focus:ring-4 focus:ring-gold-400/20;
+  }
+  .field-error {
+    @apply border-red-400 focus:border-red-400 focus:ring-red-400/15;
+  }
+
+  .prose-legal h3 {
+    @apply mb-2 mt-6 text-xl font-semibold text-graphite-900;
+  }
+  .prose-legal h4 {
+    @apply mb-2 mt-4 text-lg font-semibold text-graphite-900;
+  }
+  .prose-legal p {
+    @apply mb-4 leading-relaxed text-graphite-700;
+  }
+  .prose-legal ul {
+    @apply mb-4 list-disc space-y-1.5 pl-5 text-graphite-700 marker:text-gold-500;
+  }
+  .prose-legal ol {
+    @apply mb-4 list-decimal space-y-1.5 pl-5 text-graphite-700 marker:font-semibold marker:text-gold-600;
+  }
+  .prose-legal blockquote {
+    @apply my-5 rounded-2xl border-l-4 border-gold-500 bg-gold-50 px-5 py-3 text-graphite-900;
+  }
+  .prose-legal strong {
+    @apply font-bold text-graphite-900;
+  }
+
+  .chat-md p {
+    @apply mb-2 last:mb-0;
+  }
+  .chat-md strong {
+    @apply font-bold;
+  }
+  .chat-md ul {
+    @apply mb-2 list-disc space-y-1 pl-4 marker:text-gold-600;
+  }
+  .chat-md ol {
+    @apply mb-2 list-decimal space-y-1 pl-4;
+  }
+}
+
+/* ------------------------- Efectos 3D ------------------------- */
+
+/* Tarjeta con inclinación 3D (ver hooks/useTilt.ts). */
+.tilt {
+  transform-style: preserve-3d;
+  transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.tilt.is-tilting {
+  transition: transform 0.08s linear, box-shadow 0.3s ease;
+}
+/* Capas que "flotan" sobre la tarjeta. */
+.tilt-pop {
+  transform: translateZ(var(--pop, 40px));
+}
+/* Brillo especular que sigue al cursor. */
+.tilt-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.28), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tilt.is-tilting .tilt-glare {
+  opacity: 1;
+}
+
+/* Tarjetas de abogados: giro 3D */
+.flip-scene {
+  perspective: 1600px;
+}
+.flip-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-scene.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+@media (hover: hover) and (pointer: fine) {
+  .flip-scene.hover-flip:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Escena 3D del hero */
+.scene-3d {
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.bg-dots-dark {
+  background-image: radial-gradient(rgba(29, 32, 38, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 108, 120, 0.35) transparent;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .tilt {
+    transform: none !important;
+  }
+}
